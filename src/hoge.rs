@@ -4,6 +4,7 @@
 
     #[get("/")]
     // ここの関数名とサービスの関数名は合わせる必要がある
+    // pubと明示しなければprivateになる
     pub async fn index() -> impl Responder {
         HttpResponse::Ok().body("Hello world!")
     }
